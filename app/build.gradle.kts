@@ -71,6 +71,10 @@ android {
 		viewBinding = true
 		buildConfig = true
 		aidl = true
+		compose = true
+	}
+
+	composeOptions {
 	}
 
 	compileOptions {
@@ -155,4 +159,16 @@ dependencies {
 	implementation (libs.pytorch.android.lite)
 	implementation (libs.pytorch.android.torchvision.lite)
 	implementation (libs.gson)
+
+	// Jetpack Compose
+	implementation("androidx.compose.ui:ui:1.8.1")
+	implementation("androidx.compose.material:material:1.8.1")
+	implementation("androidx.compose.material3:material3:1.3.2")
+	implementation("androidx.compose.runtime:runtime:1.8.1")
+	implementation(libs.androidx.activity) // Corresponds to activity-compose version 1.10.1
+	implementation("androidx.compose.ui:ui-tooling-preview:1.8.1")
+
+	// Compose UI Testing
+	androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.8.1")
+	debugImplementation("androidx.compose.ui:ui-test-manifest:1.8.1")
 }
